@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ann-pod 
+  labels:
+    env: prod
+  annotations:
+    myapp: "eks<url>"
+    sonarqube: "https://sonar.io/project-key.enable"
+spec:
+  containers:
+    - name: ann-con 
+      image: jenkins/jenkins
